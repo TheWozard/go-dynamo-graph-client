@@ -24,17 +24,15 @@ jobs:
         with:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-v1-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-v1-go-
+
       - name: Test
-        run: go test -race -covermode=atomic -coverprofile="profile.lcov" ./...
+        run: go test -race -covermode=atomic -coverprofile="profile.cov" ./...
 
       - name: Coveralls
         if: matrix.os == 'ubuntu-latest'
-        uses: coverallsapp/github-action@master
+        uses: shogo82148/actions-goveralls@v1
         with:
-          github-token: ${{ secrets.github_token }}
-          path-to-lcov: "profile.lcov"
+          path-to-profile: profile.cov
 
   golangci:
     name: lint
