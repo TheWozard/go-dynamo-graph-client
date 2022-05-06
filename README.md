@@ -1,5 +1,5 @@
 # go-dynamo-graph-client
-[![Test Status](https://github.com/TheWozard/go-dynamo-graph-client/actions/workflows/test.yml/badge.svg)](https://github.com/TheWozard/go-dynamo-graph-client/actions/workflows/test.yml)
+[![Test Status](https://github.com/TheWozard/go-dynamo-graph-client/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/TheWozard/go-dynamo-graph-client/actions/workflows/workflow.yml)
 [![Coverage Status](https://coveralls.io/repos/github/TheWozard/go-dynamo-graph-client/badge.svg?branch=master)](https://coveralls.io/github/TheWozard/go-dynamo-graph-client?branch=master)
 
 A golang client using dynamo db as an (Adjacency List)[https://en.wikipedia.org/wiki/Adjacency_list] graph
